@@ -34,11 +34,14 @@ function Navbar() {
         {/* Mobile Menu */}
     
        <div className="flex items-center justify-between p-2 md:hidden bg-green-900">
+            <a href="/" className="flex items-center">
                 <img 
                     src={Banner} 
                     alt="Garden Banner" 
-                    className="h-12 object-contain" 
+                    className="h-12 object-contain rounded-lg shadow-lg"
                 />
+                </a>
+                <h1 className="text-white items-center text-2xl ">LESPC NYC</h1>
                 <button
                     ref={buttonRef}
                     onClick={() => setIsOpen(!isOpen)}
@@ -91,6 +94,7 @@ function Navbar() {
       
         {/* Desktop Menu */}
         <div className="container mx-auto hidden md:flex items-center h-16  w-full">
+            
             <img 
             src={Banner} 
             alt="Garden Banner" 

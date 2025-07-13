@@ -59,7 +59,7 @@ useEffect(() => {
         <p className="max-w-4xl items-center justify-center text-center text-xl"> We have been working on a variety of projects including building a new picnic table and benches, 
             painting old benches, waterproofing garden beds, pruning, and general garden cleanup. </p>
 
-          <p className="text-xl mt-8"> Thanks so much to all our volunteers for their hard work!</p>
+          <p className="text-xl mt-8 text-center "> Thanks so much to all our volunteers for their hard work!</p>
         <h2 className="text-3xl mt-10 text-center max-w-2xl text-green-900 mt-4">
           Explore our collection of images showcasing the beauty and diversity of our garden.
         </h2>
