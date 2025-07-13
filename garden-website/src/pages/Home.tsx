@@ -25,7 +25,7 @@ export function Home() {
         <div className="absolute top-0  left-0 w-full h-[80vh] flex items-end pb-10 px-4 md:px-4 text-grey-800 bg-opacity-50">
                 <div className="text-white max-w-2xl px-4">
                 <h1 className="text-5xl font-bold mb-4">Welcome to Our Garden</h1>
-                <p className="text-xl mb-6">Explore the beauty of nature...</p>
+                <p className="text-2xl mb-6">Explore the beauty of nature...</p>
                 </div>
             </div>
 

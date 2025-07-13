@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import 'react-lazy-load-image-component/src/effects/blur.css';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { motion, } from 'framer-motion';
+
 import 'swiper/swiper-bundle.css'
 
 const GALLERY_IMAGES = [

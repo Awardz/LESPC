@@ -1,5 +1,3 @@
-import React from 'react';
-
 type HeroProps = {
     image: string;
     alt: string;
@@ -9,7 +7,6 @@ type HeroProps = {
 function Hero({
     image,
     alt,
-    title,
     className='',
  }: HeroProps)   {
 

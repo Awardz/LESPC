@@ -1,7 +1,5 @@
-import { useEffect, useState } from 'react'
-import React from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect } from 'react'
+
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './index.css'
