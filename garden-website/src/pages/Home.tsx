@@ -7,9 +7,9 @@ import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'
 //Images
 import Picture from '../assets/sky.jpg'
-import Garden1 from '../assets/garden1.jpg'
-import Frogger from '../assets/frogger.jpg'
-import Library from '../assets/library.jpg'
+import Garden1 from '../assets/Garden1.jpg'
+import Frogger from '../assets/Frogger.jpg'
+import Library from '../assets/Library.jpg'
 
 
 export function Home() {
