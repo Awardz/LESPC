@@ -24,7 +24,7 @@ export function GetInvolved() {
       .setLngLat([-73.989896, 40.712994]) // Same as your center or specific spot
       .setPopup(
         new maplibregl.Popup() // Optional popup
-          .setHTML('<h3 class="font-bold">LESPC</h3><p>Open daily 9AM-5PM</p>')
+          .setHTML('<h3 class="font-bold">LESPC NYC</h3>')
       )
       .addTo(map);
   });
