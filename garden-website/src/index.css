@@ -1,5 +1,45 @@
 @import "tailwindcss";
-  .fc-event {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #14532d!important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #16a34a !important;
+}
+
+.swiper-pagination-bullet {
+  background: #14532d !important;
+}
+.fc .fc-button {
+  background-color: #14532d !important;
+  border: none !important;
+  font-size: 1.25rem !important;
+  padding: 0.5rem 1rem !important;
+}
+
+.fc .fc-button:hover {
+  background-color: #15803d !important;
+  border-color: #15803d !important;
+  transform: translateY(-1px);
+}
+
+.fc .fc-button:active {
+  background-color: #14532d !important;
+  transform: translateY(0);
+}
+
+.fc .fc-toolbar-title {
+  order: 1 !important; /* Title comes first */
+  margin-bottom: 0.5rem !important;
+  font-size: 1.5rem !important;
+}
+.fc-event {
     border-radius: 0.5rem !important;
     padding: 0.5rem !important;
     font-size: 1.25rem !important;
@@ -10,8 +50,20 @@
     margin-bottom: 2px !important;
   }
 
+.fc-daygrid-day {
+  height: 200px !important;
+}
 
+.fc-daygrid-day-frame {
+  height: 100% !important;
+  min-height: unset !important;
+}
 
+.fc-daygrid-event {
+  margin: 2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .fc-event.community-cleanup {
   background-color: #48bb78 !important;
   color: white !important;
@@ -34,15 +86,29 @@
   font-size: 1.25rem !important;
 }
 
-/* Target a specific date */
-.fc-daygrid-day[data-date="2025-07-12"] {
-  background-color: black !important; /* Light green */
-}
+/* Mobile-specific styles */
+@media (max-width: 768px) {
 
-.fc-daygrid-day[data-date="2025-07-25"] {
-    background: url('../assets/Tree.jpg') ;
-}
+  
+  .fc-toolbar-title {
+    font-size: 1.25rem !important;
+  }
+  
+  .fc-daygrid-day {
+    height: 80px !important; /* Smaller cells for mobile */
+  }
+  
+  .fc-event {
+    font-size: 0.75rem !important;
+    padding: 1px 2px !important;
+  }
+  
+  .fc-daygrid-event-dot {
+    display: none !important; /* Hide dots to save space */
 
+    
+  }
+}
 
 
 /* :root {

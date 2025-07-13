@@ -36,10 +36,10 @@ export function GetInvolved() {
 
   return (
     <>
-      <div className='flex flex-row'>
-        <div id="map" style={{ width: '80%', height: '400px', marginTop: '5rem', }} />
-        <div className='flex flex-col items-center justify-center p-8 bg-white w-1/2'>
-          <h1 className="text-7xl font-bold text-center mt-8">Visit Us!</h1>
+      <div className='flex md:flex-row flex-col items-center justify-center p-8 bg-white'>
+        <div id="map" className="w-full md:w-4/5 h-[400px] mt-20 md:mt-20"/>
+        <div className='flex flex-col items-center justify-center p-8 bg-white w-full md:w-1/2'>
+          <h1 className="text-3xl font-bold text-center mt-8 text-green-900">Visit Us!</h1>
           <p className="text-center mt-4 text-gray-600 text-2xl">
             Lower East Side People Care<br />25 Rudgers Street, New York, NY 10002. <br /> (Between Madison Street and Henry Street)
             <br />Come visit us and experience the beauty of our urban garden!
@@ -48,30 +48,51 @@ export function GetInvolved() {
       </div>
 
 
-      <div className="mx-auto px-4 py-8 w-screen bg-white shadow-lg rounded-lg border border-gray-200">
-        <h1 className="text-7xl  text-center mt-8">Get Involved</h1>
-        <div className='relative'>
-        <img src={Member} alt="Member"
-        className="mx-auto w-full h-auto object-cover rounded-lg shadow-lg brightness-50" />
+      <div className="mx-auto px-4 py-8 w-screen bg-white shadow-lg rounded-lg">
+        <h1 className="text-3xl font-bold text-center mt-8 text-green-900">Get Involved!</h1>
 
-        <div className='absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white mb-250'>
-        <p className="text-center mb-6 text-3xl  w-[20%]">
-          Join us in making a difference in our community! 
-        </p>
-       
-
-          <button className="px-6 py-3 rounded-lg text-white font-medium transition-colors">
+         {/* Mobile */}
+        <div className='md:hidden relative'>
+          <img 
+            src={Member} 
+            alt="Member"
+            className="w-full h-64 object-cover rounded-lg shadow-lg brightness-75"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white">
+            <p className="text-xl font-medium mb-6 w-4/5">
+              Join us in making a difference in our community! 
+            </p>
             <a
               href="../public/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
               download="LESPC-Volunteer-Application.pdf"
-              className="px-4 py-2 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors"
+              className="px-6 py-3 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors"
             >
-              Download Volunteer Application
+              Download Member Application
             </a>
-          </button>
-         
+          </div>
         </div>
-        </div>
+
+    <div className='hidden md:block relative'>
+  <img 
+    src={Member} 
+    alt="Member"
+    className="w-full h-auto object-cover rounded-lg shadow-lg brightness-50"
+  />
+  <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center text-white">
+    <div className="w-full max-w-2xl px-8"> 
+      <p className="text-3xl mb-8 leading-tight"> 
+        Join us in making a difference in our community! 
+      </p>
+      <a
+        href="../public/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
+        download="LESPC-Volunteer-Application.pdf"
+        className="inline-block px-8 py-4 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors text-xl"
+      >
+        Download Membership Application
+      </a>
+    </div>
+  </div>
+</div>
       </div>
     </>
   );

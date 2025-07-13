@@ -5,7 +5,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import '../index.css'; // Ensure you have the correct path to your CSS file
 
 import Tree from '../assets/Tree.jpg';
-
+import Banner from '../assets/Banner3.jpg'
 
 
 function renderEventContent(eventInfo: any) {
@@ -22,14 +22,19 @@ function renderEventContent(eventInfo: any) {
 }
 
 export function Events() {
-
+// Make it all like the 5th
     return (
         <>
-        <div className='bg-green-600 text-white p-8 mt-16'>
-            <h1 className='text-4xl font-bold'>Upcoming Events</h1>
-            <p className='mt-4'>Join us for our upcoming events and activities in the garden!</p>
+        <div className='relative text-white '>
+            <img src={Banner} alt="Garden Banner" className="w-full h-[60vh] object-cover rounded-lg shadow-lg mb-8 brightness-50" />
+            <div className='absolute inset-0 flex flex-col items-center justify-center text-center p-8 bg-black/50'>
+                 <h1 className='text-3xl font-bold'>Upcoming Events</h1>
+            <p className='mt-4 text-2xl'>Join us for our upcoming events and activities in the garden!</p>
+            </div>
+           
         </div>
         <div className='min-h-screen bg-white p-8'>
+            
            <FullCalendar
                     plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
                     initialView="dayGridMonth"
@@ -41,92 +46,56 @@ export function Events() {
                         right: 'next'
                     }}
                     buttonText={{
-                        today: 'Current Date',
-                        month: 'Month',
-                        week: 'Week',
-                        day: 'Day'
+                        today: 'Current Month'
                         
                     }}
                     eventContent={renderEventContent}
                     events={[
-                        
-                        { title: 'Community Clean-Up', date: '2023-10-12' },
-                        { title: 'Community Clean-Up', start: '2025-07-12', end: '2025-07-17', url: 'https://google.com', 
-                            className: 'community-cleanup'
-                        },
-                        { title: 'Harvest Festival', date: '2025-07-20', className: 'harvest-festival' },
-                        { title: 'Garden Workshop', date: '2025-07-05', className: 'garden-workshop' },
-                        { title: 'Garden Workshop', date: '2025-07-05', className: 'garden-workshop' },
-                        { title: 'Garden Workshop', date: '2025-07-05', className: 'garden-workshop' },
-                        { title: 'Tree Art', date: '2025-07-25', className: 'tree-art', image: Tree },
+                       
                         
                     ]}
-                    
+                                        
                     navLinks={true}
-                    dragScroll={true}
+                    selectable={true}
+                    selectMirror={true}
                     dayMaxEvents={true}
+                    nowIndicator={true}
+                    editable={true}
+                    droppable={true}
+                    eventResizableFromStart={true}
+                    eventDragMinDistance={10}
 
                     eventDragStart={() => document.body.style.cursor = 'grabbing'}
                 />
 
         </div>
-        <div className='flex flex-col items-center justify-center  text-black p-8 mt-16'>
-            <h1 className='text-4xl font-bold'>Upcoming Events</h1>
-            <p className='mt-4'>Join us for our upcoming events and activities in the garden!</p>
-        </div>
+       {/*  <div className='flex flex-col items-center justify-center  text-black p-8 mt-16'>
+            <h1 className='text-3xl font-bold text-green-900'>Upcoming Events</h1>
+            <p className='text-2xl mt-4 md:text-center'>Join us for our upcoming events and activities in the garden!</p>
+        </div> */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 w-full px-4 ">
-            <div className="bg-transparent rounded-xl border border-white/5 hover:border-green-400/50
+       {/*  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full px-4 ">
+ 
+
+             
+                <div className="bg-transparent rounded-xl border border-white/5 hover:border-green-400/50
                 border-l-4 border-l-green-500 hover:border-l-green-300 shadow-lg hover:shadow-green-500/20
                 hover:bg-white/5 transition-all duration-500 group overflow-hidden mb-8 transform scale-70 hover:scale-100"> 
                 <div className='bg-green-600 text-white p-4 w-full border-b-2 border-green-500'> 
                     <h2 className="text-4xl text-white flex justify-between">
-                        <span>Tree Art</span>
-                        <span>07.25.2025</span>
+                        <span>Title Name</span> 
+                         <span> Date </span> 
                     </h2> 
                 </div>
                 <img src={Tree} alt="Tree" className="w-full object-cover h-auto"   /> 
                 <p className="list-disc list-inside text-2xl font-normal text-black pl-5 pt-5 space-y-5">
-                    Built a wealth management app backend with FastAPI, PostgreSQL, and Plaid API, enabling user registration and secure bank account
-                    linking for real-time balance tracking.
-                </p>
-            </div>
-
-                    <div className="bg-transparent rounded-xl border border-white/5 hover:border-green-400/50
-                border-l-4 border-l-green-500 hover:border-l-green-300 shadow-lg hover:shadow-green-500/20
-                hover:bg-white/5 transition-all duration-500 group overflow-hidden mb-8 transform scale-70 hover:scale-100"> 
-                <div className='bg-green-600 text-white p-4 w-full border-b-2 border-green-500'> 
-                    <h2 className="text-4xl text-white flex justify-between">
-                        <span>Tree Art</span>
-                        <span>07.25.2025</span>
-                    </h2> 
-                </div>
-                <img src={Tree} alt="Tree" className="w-full object-cover h-auto"   /> 
-                <p className="list-disc list-inside text-2xl font-normal text-black pl-5 pt-5 space-y-5">
-                    Built a wealth management app backend with FastAPI, PostgreSQL, and Plaid API, enabling user registration and secure bank account
-                    linking for real-time balance tracking.
-                </p>
-            </div>
-
-                    <div className="bg-transparent rounded-xl border border-white/5 hover:border-green-400/50
-                border-l-4 border-l-green-500 hover:border-l-green-300 shadow-lg hover:shadow-green-500/20
-                hover:bg-white/5 transition-all duration-500 group overflow-hidden mb-8 transform scale-70 hover:scale-100"> 
-                <div className='bg-green-600 text-white p-4 w-full border-b-2 border-green-500'> 
-                    <h2 className="text-4xl text-white flex justify-between">
-                        <span>Tree Art</span>
-                        <span>07.25.2025</span>
-                    </h2> 
-                </div>
-                <img src={Tree} alt="Tree" className="w-full object-cover h-auto"   /> 
-                <p className="list-disc list-inside text-2xl font-normal text-black pl-5 pt-5 space-y-5">
-                    Built a wealth management app backend with FastAPI, PostgreSQL, and Plaid API, enabling user registration and secure bank account
-                    linking for real-time balance tracking.
+                
                 </p>
             </div>
                  
 
 
-        </div>
+        </div> */}
         </>
     
     )
