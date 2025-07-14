@@ -50,7 +50,8 @@ export function Home() {
         </div>
             
             <div className="container mx-auto px-4 items-center mb-8">
-            <h1 className="text-3xl font-bold text-center text-green-900">Gallery</h1>
+            <h1 className="text-3xl font-bold text-center text-green-900">Gallery Preview</h1>
+      
             <Swiper
             spaceBetween={50}
             slidesPerView={1}
@@ -73,6 +74,7 @@ export function Home() {
                 </SwiperSlide>
             ))}
             </Swiper>
+                  <h2 className='text-center text-2xl mt-8'> <a className='text-blue-500 underline font-bold'href="/gallery">LESPC GALLERY</a></h2>
             </div>
             </>
     );

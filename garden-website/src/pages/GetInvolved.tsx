@@ -36,20 +36,8 @@ export function GetInvolved() {
 
   return (
     <>
-      <div className='flex md:flex-row flex-col items-center justify-center p-8 bg-white'>
-        <div id="map" className="w-full md:w-4/5 h-[400px] mt-20 md:mt-20"/>
-        <div className='flex flex-col items-center justify-center p-8 bg-white w-full md:w-1/2'>
-          <h1 className="text-3xl font-bold text-center mt-8 text-green-900">Visit Us!</h1>
-          <p className="text-center mt-4 text-gray-600 text-2xl">
-            Lower East Side People Care<br />25 Rudgers Street, New York, NY 10002. <br /> (Between Madison Street and Henry Street)
-            <br />Come visit us and experience the beauty of our urban garden!
-          </p>
-        </div>
-      </div>
-
-
       <div className="mx-auto px-4 py-8 w-screen bg-white shadow-lg rounded-lg">
-        <h1 className="text-3xl font-bold text-center mt-8 text-green-900">Get Involved!</h1>
+        <h1 className="text-3xl font-bold text-center mt-8 text-green-900 mb-8 mt-16">Get Involved!</h1>
 
          {/* Mobile */}
         <div className='md:hidden relative'>
@@ -72,7 +60,7 @@ export function GetInvolved() {
           </div>
         </div>
 
-    <div className='hidden md:block relative'>
+  <div className='hidden md:block relative'>
   <img 
     src={Member} 
     alt="Member"
@@ -94,6 +82,22 @@ export function GetInvolved() {
   </div>
 </div>
       </div>
+      <div className='flex md:flex-row flex-col items-center justify-center p-8 bg-white'>
+        
+        <div className='flex flex-col items-center justify-center  bg-white w-full md:w-1/2'>
+          <h1 className="text-3xl font-bold text-center text-green-900 ">Visit Us!</h1>
+          <p className="text-center mt-4 text-gray-600 text-2xl">
+            Lower East Side People Care<br />25 Rudgers Street, New York, NY 10002. <br /> (Between Madison Street and Henry Street)
+            <br />Come visit us and experience the beauty of our urban garden!
+          </p>
+          
+        </div>
+      
+        <div id="map" className="w-full md:w-4/5 h-[400px] mt-8 md:mt-8"/>
+      </div>
+
+
+    
     </>
   );
 }
