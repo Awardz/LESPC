@@ -13,7 +13,7 @@ const GALLERY_IMAGES = [
     '/images/gallery_optimized/sky2.webp',
     '/images/gallery_optimized/Frogger2.jpg',
     '/images/gallery_optimized/Summer2025.webp',
-    '/images/gallery_optimized/Tree2.webp',
+    '/images/gallery_optimized/WallPaint2.webp',
     '/images/gallery_optimized/Garden1.webp',
     '/images/gallery_optimized/ContactBackground.webp',
     '/images/gallery_optimized/WallPaint.webp',
@@ -24,9 +24,12 @@ const GALLERY_IMAGES = [
     '/images/gallery_optimized/Plants.webp',
     '/images/gallery_optimized/Library.webp',
     '/images/gallery_optimized/Seating2.webp',
-    '/images/gallery_optimized/WallPaint2.webp',
+    '/images/gallery_optimized/Tree2.webp',
+    
     '/images/gallery_optimized/AboutHero.webp',
     '/images/gallery_optimized/BirdHouses.webp',
+    '/images/gallery_optimized/Library2.webp',
+    '/images/gallery_optimized/Ladder.webp',
     '/images/gallery_optimized/PinkFlower.webp',
   // Add more image URLs as needed
 ];
