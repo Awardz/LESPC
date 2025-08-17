@@ -51,9 +51,9 @@ export function GetInvolved() {
               Join us in making a difference in our community! 
             </p>
             <a
-              href="../public/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
-              download="LESPC-Volunteer-Application.pdf"
-              className="px-6 py-3 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors"
+              href="/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
+              download="LESPC-Volunteer-Application.docx"
+              className="inline-block px-8 py-4 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors text-xl"
             >
               Download Member Application
             </a>
