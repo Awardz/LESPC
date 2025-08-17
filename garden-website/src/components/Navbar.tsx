@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
+import '../index.css';
 import { motion, AnimatePresence } from "framer-motion";
 import { CustomNavLink } from "./CustomNavLink";
 //Images
@@ -93,18 +93,18 @@ function Navbar() {
       </AnimatePresence>
       
         {/* Desktop Menu */}
-        <div className="container mx-auto hidden md:flex items-center h-16  w-full">
+        <div className="container mx-auto hidden md:flex items-center h-16 w-full">
             
             <img 
             src={Banner} 
             alt="Garden Banner" 
             className="h-16 object-contain rounded-l-lg shadow-lg " 
             />
-            <div className="container mx-auto flex justify-end items-center h-full px-4 bg-green-900 rounded-r-lg text-white">
+            <div className="container mx-auto flex justify-end items-center h-full px-4 bg-green-900 rounded-r-lg text-white h-full min-w-0">
 
             {/* <h1 className="text-xl font-bold text-green-700">Garden</h1> */}
             <div className="flex-grow ">
-                <h1 className=" flex items-center justify-center xl:text-3xl md:text-2xl lg:text-lg">Lower East Side People Care (LESPC)</h1>
+                <h1 className="hide-on-short-portrait flex items-center justify-center xl:text-3xl md:text-2xl lg:text-lg ">Lower East Side People Care (LESPC)</h1>
             </div>
             
             <ul className="flex space-x-4 space-x-8">

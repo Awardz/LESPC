@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+@media (orientation: portrait) and (max-height: 2000px), (max-width: 1100px) {
+  .hide-on-short-portrait {
+    display: none;
+  }
+}
+
 body {
   font-family: 'Times New Roman', Times, serif;
 }
