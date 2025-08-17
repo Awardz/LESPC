@@ -51,8 +51,8 @@ export function GetInvolved() {
               Join us in making a difference in our community! 
             </p>
             <a
-              href="/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
-              download="LESPC-Volunteer-Application.docx"
+              href="/downloads/LESPC MEMBERSHIP APPLICATION 2025.pdf" 
+              download="LESPC-Volunteer-Application.pdf"
               className="inline-block px-8 py-4 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors text-xl"
             >
               Download Member Application
@@ -72,8 +72,8 @@ export function GetInvolved() {
         Join us in making a difference in our community! 
       </p>
       <a
-        href="/downloads/LESPC MEMBERSHIP APPLICATION 2025.docx" 
-        download="LESPC-Volunteer-Application.docx"
+        href="/downloads/LESPC MEMBERSHIP APPLICATION 2025.pdf" 
+        download="LESPC-Volunteer-Application.pdf"
         className="inline-block px-8 py-4 bg-green-900 text-white rounded-lg hover:bg-green-600 transition-colors text-xl"
       >
         Download Membership Application
