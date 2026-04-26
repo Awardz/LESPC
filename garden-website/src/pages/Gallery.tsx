@@ -67,7 +67,7 @@ useEffect(() => {
     try {
       // Preload only first 3 images
       await Promise.all(
-        GALLERY_IMAGES2025.slice(0, 3).map((img) => {
+        FEATURED.slice(0, 3).map((img) => {
           return new Promise((resolve, reject) => {
             const image = new Image();
             image.src = img;
@@ -87,19 +87,24 @@ useEffect(() => {
 
     return (
         <div className="relative min-h-screen bg-gray-100 overflow-hidden mt-16">
-            <div className="relative z-10 flex flex-col items-center justify-center min-h-screen p-4">
-                <h1 className="text-3xl font-bold mb-6 text-green-900">Gallery</h1>
+            <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
+                <h1 className="text-3xl font-bold mb-6 text-green-900 mt-16">Gallery</h1>
                 <p className="max-w-4xl items-center justify-center text-center text-xl">
                     We have been working on a variety of projects including building a new picnic table and benches,
                     painting old benches, waterproofing garden beds, pruning, and general garden cleanup.
                 </p>
                 <p className="text-xl mt-8 text-center">Thanks so much to all our volunteers for their hard work!</p>
-                <h2 className="text-3xl mt-10 text-center max-w-2xl text-green-900 mt-4">
+                <h2 className="text-3xl mt-10 text-center max-w-2xl text-green-900 mt-4 mb-16">
                     Explore our collection of images showcasing the beauty and diversity of our garden.
                 </h2>
 
-                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">FEATURED MOMENTS</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div className="bg-green-900 w-full h-auto">
+                    <div className="p-8">
+                        <h1 className="text-2xl text-white w-full border-b border-white font-bold ">FEATURED MOMENTS</h1>
+                    </div>
+        
+             
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8 items-start">
                      {FEATURED.map((image, index) => (
                         <motion.div
                         key={index}
@@ -109,7 +114,7 @@ useEffect(() => {
                             duration: 0.3,
                             delay: index * 0.05
                         }}
-                        className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+                        className=" rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
                         onClick={() => setSelectedImage(image)}
                         >
                         <img
@@ -127,8 +132,11 @@ useEffect(() => {
                     </div>
 
                 {/* 2026 Gallery Grid */}
-                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">2026</h2>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div className="p-8">   
+                    <h1 className="text-3xl text-white border-b border-white font-bold">2026</h1>
+                </div>
+    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  p-8">
                     {GALLERY_IMAGES2026.map((image, index) => (
                         <motion.div
                             key={index}
@@ -159,9 +167,13 @@ useEffect(() => {
 
 
                 {/* 2025 Gallery Grid */}
-                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">2025</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                <div className="p-8">
+                    <h1 className="text-3xl text-white w-full border-b border-white font-bold  ">2025</h1>
+                </div>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6  p-8 items-start">
                     {GALLERY_IMAGES2025.map((image, index) => (
+                           
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
@@ -173,18 +185,19 @@ useEffect(() => {
                             className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
                             onClick={() => setSelectedImage(image)}
                         >
-                            <img
-                                src={image}
-                                alt={`Gallery Image ${index + 1}`}
-                                className="w-full h-[60vh] object-cover hover:opacity-90 transition-opacity"
-                            />
-                            {/* Display credit below the image if it exists */}
-                            {IMAGE_CREDITS[image] && (
-                                <p className="p-2 text-sm text-center text-white bg-green-900">
-                                    {IMAGE_CREDITS[image]}
-                                </p>
-                            )}
+                                    <img
+                            src={image}
+                            alt={`Gallery Image ${index + 1}`}
+                            className="w-full h-[60vh] object-cover hover:opacity-90 transition-opacity"
+                        />
+                        {IMAGE_CREDITS[image] && (
+                            <p className="p-2 text-sm text-center text-green-900 bg-white">
+                            {IMAGE_CREDITS[image]}
+                            </p>
+                        )}
+                           
                         </motion.div>
+                        
                     ))}
                 </div>
 
@@ -223,5 +236,6 @@ useEffect(() => {
                 )}
             </div>
         </div>
+</div>
     );
 }
