@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 //Images
 import Sign from '../assets/gardenSign.jpg'
 import HeroImage from '../assets/AboutHero.jpg'
-
+import Picture from '../assets/sky.jpg'
 export function AboutUs() {
   return (
     <>
@@ -35,6 +35,30 @@ export function AboutUs() {
         </div>
       </div>
 
+           <div className="flex flex-col w-full md:flex-row items-center justify-center bg-white p-8">
+                <div className="flex flex-col items-center justify-center p-8 w-full md:w-1/2 md:border-r border-gray-600">
+                <h1 className="text-3xl font-bold text-center mt-8 text-green-900">Our Mission, Vision, and Values</h1>
+                    <p className="text-center mt-8 text-gray-600 max-w-xl text-2xl">Lower East Side People Care is an urban gardening green space that is staffed by hard working
+                        community volunteers who oversee the daily maintenance of the garden. <br></br><br></br>
+                         We are committed to
+                        ensuring that our LESPC garden is a dynamic and vibrant space for all to enjoy. LESPC is
+                        grounded in the community, environmental, and opportunities for active engagement.
+                        
+                        <br /><br /> As we
+                        look to the future, we see a space where users feel safe and welcomed, where nature is
+                        nurtured and protected. We cultivate opportunities for social interaction and recreation in a
+                        positive atmosphere that is representative of our neighborhood.
+                        <br /><br />
+                         LESPC is a valued part of the
+                        Lower East Side community, providing a green space for enjoyment and fostering connections
+                        among neighbors.</p>
+                </div>
+
+            <div className="flex justify-center p-4 w-full md:w-1/2 ">
+               <img src={Picture} alt="Sky" className="h-[80vh] max-w-2xl object-cover rounded-lg shadow-lg" />
+            </div>
+        </div>
+
       <div className="flex flex-col md:flex-row p-4 md:p-8 bg-white items-center justify-center">
       <div className='flex justify-center w-full md:w-auto mb-6 md:mb-0 md:mr-8'>
         <img 
@@ -61,6 +85,8 @@ export function AboutUs() {
         </div>
       </div>
     </div>
+
+
 
      {/*  <div className="flex flex-row  p-8 bg-white items-center justify-center">
         <div className='flex flex-row items-center justify-center '>

@@ -4,38 +4,57 @@ import { motion, } from 'framer-motion';
 
 import 'swiper/swiper-bundle.css'
 
+const FEATURED = [
+    '/images/gallery_optimized/2025/Artwork.webp',
+    '/images/gallery_optimized/2026/DaffodilsatLESPC.webp',
+    '/images/gallery_optimized/2025/Entrance.webp',
+];
 
-const GALLERY_IMAGES = [
-    '/images/gallery_optimized/Frogger.webp',
-    '/images/gallery_optimized/Artwork.webp',
-    '/images/gallery_optimized/Entrance.webp',
-    '/images/gallery_optimized/Entryway.webp',
-    '/images/gallery_optimized/sky2.webp',
-    '/images/gallery_optimized/Frogger2.jpg',
-    '/images/gallery_optimized/Summer2025.webp',
-    '/images/gallery_optimized/WallPaint2.webp',
-    '/images/gallery_optimized/Garden1.webp',
-    '/images/gallery_optimized/ContactBackground.webp',
-    '/images/gallery_optimized/WallPaint.webp',
-    '/images/gallery_optimized/EventSpace.webp',
-    '/images/gallery_optimized/Seating.webp',
-    '/images/gallery_optimized/Tree.webp',
-    '/images/gallery_optimized/PlantOrn.webp',
-    '/images/gallery_optimized/Plants.webp',
-    '/images/gallery_optimized/Library.webp',
-    '/images/gallery_optimized/Seating2.webp',
-    '/images/gallery_optimized/Tree2.webp',
+const GALLERY_IMAGES2025 = [
+    '/images/gallery_optimized/2025/Frogger.webp',
+    '/images/gallery_optimized/2025/Artwork.webp',
+    '/images/gallery_optimized/2025/Entrance.webp',
+    '/images/gallery_optimized/2025/Entryway.webp',
+    '/images/gallery_optimized/2025/sky2.webp',
+    '/images/gallery_optimized/2025/Frogger2.jpg',
+    '/images/gallery_optimized/2025/Summer2025.webp',
+    '/images/gallery_optimized/2025/WallPaint2.webp',
+    '/images/gallery_optimized/2025/Garden1.webp',
+    '/images/gallery_optimized/2025/ContactBackground.webp',
+    '/images/gallery_optimized/2025/WallPaint.webp',
+    '/images/gallery_optimized/2025/EventSpace.webp',
+    '/images/gallery_optimized/2025/Seating.webp',
+    '/images/gallery_optimized/2025/Tree.webp',
+    '/images/gallery_optimized/2025/PlantOrn.webp',
+    '/images/gallery_optimized/2025/Plants.webp',
+    '/images/gallery_optimized/2025/Library.webp',
+    '/images/gallery_optimized/2025/Seating2.webp',
+    '/images/gallery_optimized/2025/Tree2.webp',
     
-    '/images/gallery_optimized/AboutHero.webp',
-    '/images/gallery_optimized/BirdHouses.webp',
-    '/images/gallery_optimized/Library2.webp',
-    '/images/gallery_optimized/Ladder.webp',
-    '/images/gallery_optimized/PinkFlower.webp',
+    '/images/gallery_optimized/2025/AboutHero.webp',
+    '/images/gallery_optimized/2025/BirdHouses.webp',
+    '/images/gallery_optimized/2025/Library2.webp',
+    '/images/gallery_optimized/2025/Ladder.webp',
+    '/images/gallery_optimized/2025/PinkFlower.webp',
   // Add more image URLs as needed
 ];
 
+const GALLERY_IMAGES2026 = [
+    
+    '/images/gallery_optimized/2026/LESPC2026SpringCleanupandPlanting.webp',
+    '/images/gallery_optimized/2026/Path.webp',
+    '/images/gallery_optimized/2026/Daffodils&theMural.webp',
+    '/images/gallery_optimized/2026/Gate.webp',
+    '/images/gallery_optimized/2026/Pottery.webp',
+    '/images/gallery_optimized/2026/Rings.webp',
+    '/images/gallery_optimized/2026/Wheelbarrow.webp',
+    '/images/gallery_optimized/2026/DaffodilsatLESPC.webp',
+    '/images/gallery_optimized/2026/Bloom.webp',
+   // '/images/gallery_optimized/2026/PathTest.webp'
+];
+
 const IMAGE_CREDITS: { [key: string]: string } = {
-    '/images/gallery_optimized/Artwork.webp': 'Artwork by Francisca Benitez',
+    '/images/gallery_optimized/2025/Artwork.webp': 'Artwork by Francisca Benitez',
   
     // Add more credits as needed, or leave empty if not available
 };
@@ -48,7 +67,7 @@ useEffect(() => {
     try {
       // Preload only first 3 images
       await Promise.all(
-        GALLERY_IMAGES.slice(0, 3).map((img) => {
+        GALLERY_IMAGES2025.slice(0, 3).map((img) => {
           return new Promise((resolve, reject) => {
             const image = new Image();
             image.src = img;
@@ -79,9 +98,70 @@ useEffect(() => {
                     Explore our collection of images showcasing the beauty and diversity of our garden.
                 </h2>
 
-                {/* Gallery Grid */}
+                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">FEATURED MOMENTS</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-                    {GALLERY_IMAGES.map((image, index) => (
+                     {FEATURED.map((image, index) => (
+                        <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 0.3,
+                            delay: index * 0.05
+                        }}
+                        className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+                        onClick={() => setSelectedImage(image)}
+                        >
+                        <img
+                            src={image}
+                            alt={`Gallery Image ${index + 1}`}
+                            className="w-full h-[60vh] object-cover hover:opacity-90 transition-opacity"
+                        />
+                        {IMAGE_CREDITS[image] && (
+                            <p className="p-2 text-sm text-center text-white bg-green-900">
+                            {IMAGE_CREDITS[image]}
+                            </p>
+                        )}
+                        </motion.div>
+                    ))}
+                    </div>
+
+                {/* 2026 Gallery Grid */}
+                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">2026</h2>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                    {GALLERY_IMAGES2026.map((image, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.3,
+                                delay: index * 0.05
+                            }}
+                            className="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow"
+                            onClick={() => setSelectedImage(image)}
+                        >
+                            <img
+                                src={image}
+                                alt={`Gallery Image ${index + 1}`}
+                                className="w-full h-[60vh] object-cover hover:opacity-90 transition-opacity"
+                            />
+                            {/* Display credit below the image if it exists */}
+                            {IMAGE_CREDITS[image] && (
+                                <p className="p-2 text-sm text-center text-white bg-green-900">
+                                    {IMAGE_CREDITS[image]}
+                                </p>
+                            )}
+                        </motion.div>
+                    ))}
+                </div>
+
+
+
+                {/* 2025 Gallery Grid */}
+                <h2 className="text-3xl text-green-900 w-full border-b border-green-900 mt-16">2025</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+                    {GALLERY_IMAGES2025.map((image, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
